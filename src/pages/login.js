@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import CheckboxWithLabel from './CheckboxWithLabel';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -98,7 +99,7 @@ function Login() {
                     onChange={e => setPassword(e.target.value)}
                 />
                 <FormControlLabel
-                    control={<Checkbox value="remember" color="primary" />}
+                    control={<CheckboxWithLabel value="remember" color="primary" />}
                     label="Remember me"
                 />
                 <Button
